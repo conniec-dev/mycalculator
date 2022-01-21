@@ -35,7 +35,7 @@ func (Calc) Operate(input string, operation string) (int, error) {
 	}
 }
 
-func (Calc) parseString(operator string) (int, error) {
+func parseString(operator string) (int, error) {
 	result, err := strconv.Atoi(operator)
 	return result, err
 }
