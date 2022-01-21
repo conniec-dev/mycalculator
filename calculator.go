@@ -13,8 +13,8 @@ type Calc struct{}
 
 func (Calc) Operate(input string, operation string) (int, error) {
 	cleanInput := strings.Split(input, operation)
-	operator1 := parseString(cleanInput[0])
-	operator2 := parseString(cleanInput[1])
+	operator1 := ParseString(cleanInput[0])
+	operator2 := ParseString(cleanInput[1])
 	switch operation {
 	case "+":
 		fmt.Println(operator1 + operator2)
@@ -35,7 +35,7 @@ func (Calc) Operate(input string, operation string) (int, error) {
 	}
 }
 
-func parseString(input string) int {
+func ParseString(input string) int {
 	operator, _ := strconv.Atoi(input)
 	return operator
 }
