@@ -35,9 +35,9 @@ func (Calc) Operate(input string, operation string) (int, error) {
 	}
 }
 
-func parseString(operator string) (int, error) {
-	result, err := strconv.Atoi(operator)
-	return result, err
+func parseString(input string) int {
+	operator, _ := strconv.Atoi(input)
+	return operator
 }
 
 func ReadInput() string {
