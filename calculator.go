@@ -42,7 +42,7 @@ func (calc) parseString(operator string) (int, error) {
 	return result, err
 }
 
-func readInput() string {
+func ReadInput() string {
 	scanner := bufio.NewScanner(os.Stdin)
 	scanner.Scan()
 	return scanner.Text()
