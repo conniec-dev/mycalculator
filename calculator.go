@@ -18,12 +18,16 @@ func (Calc) Operate(input string, operation string) (int, error) {
 	switch operation {
 	case "+":
 		fmt.Println(operator1 + operator2)
+		return operator1 + operator2, nil
 	case "-":
 		fmt.Println(operator1 - operator2)
+		return operator1 - operator2, nil
 	case "*":
 		fmt.Println(operator1 * operator2)
+		return operator1 * operator2, nil
 	case "/":
 		fmt.Println(operator1 / operator2)
+		return operator1 / operator2, nil
 	default:
 		log.Println(operation, "operation is not supported!")
 		return 0, nil
